@@ -2,14 +2,16 @@ import type { PropsWithChildren } from 'react';
 
 import { StyleSheet, Text } from '@react-pdf/renderer';
 
+import theme from '@/resume/misc/theme';
+
 const styles = StyleSheet.create({
     title: {
         fontFamily: 'Lato Bold',
         fontSize: 11,
-        color: '#45818e',
+        color: theme.colors.primary,
         textTransform: 'uppercase',
         paddingBottom: 5,
-        borderBottom: '1px solid #45818e'
+        borderBottom: `1px solid ${theme.colors.primary}`
     }
 });
 

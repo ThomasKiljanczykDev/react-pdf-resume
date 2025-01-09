@@ -25,14 +25,14 @@ const experienceData: ExperienceEntryProps[] = [
         details: [
             'Played a crucial role in saving a failing medium sized AWS .NET project resulting in a stable application with reduced operational costs',
             'Successfully cleaned up and migrated a big .NET Framework project to .NET 8 and ABP.io, enhancing app maintainability and modularity',
-            "Took over and lead client's contractor to successfully finish major app modernization effort",
-            'Chose optimal Chrome extension tech stack which led to multiple quick and successful Chrome extension implementations in the company',
-            'Actively contributed to internal libraries and development tools',
             'Introduced OpenTelemetry usage at the company resulting in faster bug analysis',
+            "Took over and lead client's contractor to successfully finish major app modernization effort",
+            'Actively contributed to internal libraries and development tools',
             'Introduced AWS superwerker usage which led to safer AWS configuration and easier app environment creation',
+            'Chose optimal Chrome extension tech stack which led to multiple quick and successful Chrome extension implementations in the company',
             'Responsible for implementation of small to medium sized Node.js/.Net projects, including AWS lambda APIs, ECS apps and Chrome extensions'
         ],
-        position: 'Software Engineer (.Net, Node.js, React, AWS)'
+        position: 'Senior Full Stack Software Engineer (.Net, Node.js, React, AWS)'
     },
     {
         company: 'CapGemini',
@@ -42,7 +42,7 @@ const experienceData: ExperienceEntryProps[] = [
             'Successfully convinced the client to introduce CI/CD pipelines in the project',
             'Responsible for development of ASP.NET MVC (.NET Framework) app'
         ],
-        position: 'Software Engineer (.Net)'
+        position: 'Full Stack Software Engineer (.Net)'
     },
     {
         company: 'Inetum',
@@ -53,7 +53,7 @@ const experienceData: ExperienceEntryProps[] = [
             'Responsible for maintenance of a .NET Framework web app with React frontend',
             'Responsible for creation of new .NET Core web APIs'
         ],
-        position: 'Junior Software Engineer (.Net)'
+        position: 'Junior Full Stack Software Engineer (.Net, React)'
     }
 ];
 
@@ -61,7 +61,7 @@ const previousExperienceData: PreviousExperienceEntryProps[] = [
     {
         company: 'Inetum',
         date: '10/2019 - 12/2020',
-        position: 'Junior QA Automation Engineer (.Net, Azure)'
+        position: 'Junior QA Automation Engineer (Groovy, .Net, Azure)'
     },
     {
         company: 'Inetum',
@@ -73,11 +73,38 @@ const previousExperienceData: PreviousExperienceEntryProps[] = [
 const skillsData: SkillEntryProps[] = [
     {
         name: '.Net',
-        skills: ['ASP.NET Core', 'ABP.IO', 'Entity Framework Core']
+        skills: [
+            'ASP.NET Core',
+            'ABP.IO',
+            'Entity Framework Core',
+            'Hangfire',
+            'OpenTelemetry',
+            'MediatR',
+            'SignalR',
+            'AutoMapper',
+            'Polly',
+            'Playwright',
+            'xunit',
+            'moq'
+        ]
     },
     {
         name: 'React / Node.js',
-        skills: ['TypeScript', 'Vite', 'Webpack', 'NestJS', 'Next.js', 'Tanstack']
+        skills: [
+            'TypeScript',
+            'NestJS',
+            'Next.js',
+            'Vite',
+            'Webpack',
+            'Redux',
+            'MUI',
+            'DevExtreme',
+            'Tanstack',
+            'Electron.js',
+            'ESLint',
+            'Prettier',
+            'Yarn Workspaces'
+        ]
     },
     {
         name: 'Databases',
@@ -86,26 +113,54 @@ const skillsData: SkillEntryProps[] = [
     {
         name: 'AWS',
         skills: [
-            'CDK',
-            'EC2',
+            'ECS',
             'RDS',
             'Lambda',
-            'ECS',
-            'S3',
-            'CloudFront',
-            'Route 53',
             'CloudWatch',
+            'CloudFront',
+            'S3',
+            'Route 53',
+            'EC2',
             'IAM',
-            'Code Deploy'
+            'Code Deploy',
+            'CDK'
         ]
     },
     {
         name: 'Tools and Software',
         skills: ['JetBrains IDEs', 'Visual Studio 2022', 'Git', 'SSMS']
+    }
+];
+
+interface LanguageDataEntry {
+    name: string;
+    level: string;
+}
+
+const languagesData: LanguageDataEntry[] = [
+    {
+        name: 'Polish',
+        level: 'native'
     },
     {
-        name: 'Languages',
-        skills: ['Polish - native', 'English - C1']
+        name: 'English',
+        level: 'C1'
+    }
+];
+
+interface ProjectDataEntry {
+    name: string;
+    link?: string;
+}
+
+const projectsData: ProjectDataEntry[] = [
+    {
+        name: 'LyricCast',
+        link: 'https://github.com/ThomasKiljanczykDev/LyricCast'
+    },
+    {
+        name: 'tensorflow-yolov4-tflite',
+        link: 'https://github.com/hunglc007/tensorflow-yolov4-tflite/pull/352'
     }
 ];
 
@@ -150,6 +205,8 @@ export {
     experienceData,
     previousExperienceData,
     skillsData,
+    languagesData,
+    projectsData,
     contactData,
     headerData,
     footerData

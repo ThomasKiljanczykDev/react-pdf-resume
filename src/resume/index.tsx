@@ -2,8 +2,11 @@ import { Font, Link, Page, type PageProps, StyleSheet, Text, View } from '@react
 
 import Contact from '@/resume/Contact';
 import Experience from '@/resume/Expierience';
+import Languages from '@/resume/Languages';
 import PreviousExperience from '@/resume/PreviousExpierience';
-import { contactData, footerData } from '@/resume/data';
+import Projects from '@/resume/Projects';
+import { contactData, footerData } from '@/resume/misc/data';
+import theme from '@/resume/misc/theme';
 
 import Education from './Education';
 import Header from './Header';
@@ -27,7 +30,7 @@ const styles = StyleSheet.create({
     rightColumn: {
         flexDirection: 'column',
         borderRadius: 8,
-        backgroundColor: '#ecf4f0',
+        backgroundColor: theme.colors.secondary,
         width: 200,
         padding: 12,
         gap: 10
@@ -36,15 +39,14 @@ const styles = StyleSheet.create({
         fontSize: 8,
         fontFamily: 'Lato',
         borderRadius: 8,
-        backgroundColor: '#ecf4f0',
+        backgroundColor: theme.colors.secondary,
         textAlign: 'center',
         padding: 2
     },
     link: {
         fontFamily: 'Lato',
         fontSize: 8,
-        color: 'black',
-        textDecoration: 'none'
+        color: 'black'
     }
 });
 
@@ -81,6 +83,8 @@ export default function Resume(props: PageProps) {
                 <View style={styles.rightColumn}>
                     <Contact />
                     <Skills />
+                    <Languages />
+                    <Projects />
                 </View>
             </View>
             <Text style={styles.footer}>

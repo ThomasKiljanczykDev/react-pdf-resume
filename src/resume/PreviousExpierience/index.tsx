@@ -2,7 +2,7 @@ import { StyleSheet, View } from '@react-pdf/renderer';
 
 import PreviousExperienceEntry from '@/resume/PreviousExpierience/PreviousExpierienceEntry';
 import Title from '@/resume/components/Title';
-import { previousExperienceData } from '@/resume/data';
+import { previousExperienceData } from '@/resume/misc/data';
 
 const styles = StyleSheet.create({
     container: {

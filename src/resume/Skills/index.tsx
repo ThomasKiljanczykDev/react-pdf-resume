@@ -2,7 +2,7 @@ import { View } from '@react-pdf/renderer';
 
 import SkillEntry from '@/resume/Skills/SkillEntry';
 import Title from '@/resume/components/Title';
-import { skillsData } from '@/resume/data';
+import { skillsData } from '@/resume/misc/data';
 
 function Skills() {
     return (

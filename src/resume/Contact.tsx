@@ -7,7 +7,7 @@ import {
     LocationIcon,
     MailIcon
 } from '@/resume/components/svg';
-import { contactData } from '@/resume/data';
+import { contactData } from '@/resume/misc/data';
 
 const styles = StyleSheet.create({
     container: {

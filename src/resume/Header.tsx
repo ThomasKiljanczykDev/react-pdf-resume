@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from '@react-pdf/renderer';
 
-import { headerData } from '@/resume/data';
+import { headerData } from '@/resume/misc/data';
+import theme from '@/resume/misc/theme';
 
 const styles = StyleSheet.create({
     container: {
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     },
     name: {
         fontSize: 14,
-        color: '#45818e',
+        color: theme.colors.primary,
         fontFamily: 'Lato Bold'
     },
     subtitle: {

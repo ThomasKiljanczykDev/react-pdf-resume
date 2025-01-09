@@ -5,7 +5,8 @@ import { DateWithIcon } from '@/resume/components/DateWithIcon';
 const styles = StyleSheet.create({
     entryContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        alignItems: 'flex-start'
     },
     company: {
         fontSize: 10,
@@ -30,10 +31,10 @@ export default function PreviousExperienceEntry(props: PreviousExperienceEntryPr
         <View style={styles.entryContainer}>
             <View
                 style={{
-                    flexDirection: 'row'
+                    flexDirection: 'column'
                 }}
             >
-                <Text style={styles.title}>{props.position}, </Text>
+                <Text style={styles.title}>{props.position}</Text>
                 <Text style={styles.company}>{props.company}</Text>
             </View>
             <DateWithIcon date={props.date} />
