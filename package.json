@@ -7,7 +7,7 @@
         "lint": "eslint . --cache --cache-strategy content --cache-location .cache/.eslintcache",
         "format": "prettier --config prettier.config.js  --write .",
         "check-types": "tsc --noEmit",
-        "dev": "vite --config vite.config.development.ts dev",
+        "dev": "vite dev",
         "render": "vite-node src/index.print.tsx"
     },
     "dependencies": {
