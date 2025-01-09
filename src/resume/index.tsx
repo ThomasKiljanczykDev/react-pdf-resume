@@ -14,7 +14,7 @@ import Skills from './Skills';
 
 const styles = StyleSheet.create({
     page: {
-        padding: 20,
+        padding: '0.5cm',
         gap: 10
     },
     container: {
