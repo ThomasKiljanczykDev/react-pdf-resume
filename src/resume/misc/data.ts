@@ -128,7 +128,7 @@ const skillsData: SkillEntryProps[] = [
     },
     {
         name: 'Tools and Software',
-        skills: ['JetBrains IDEs', 'Visual Studio 2022', 'Git', 'SSMS']
+        skills: ['JetBrains IDEs', 'Visual Studio 2022', 'Docker', 'Git', 'SSMS']
     }
 ];
 
