@@ -7,7 +7,7 @@ export default function ResumeDocument() {
         <Document
             author="Thomas Kiljanczyk"
             subject="The resume of Thomas Kiljanczyk"
-            title="Resume"
+            title="Thomas Kiljanczyk Resume"
         >
             <Resume size="A4" dpi={144} />
         </Document>

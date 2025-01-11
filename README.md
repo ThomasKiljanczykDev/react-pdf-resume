@@ -24,7 +24,7 @@ yarn dev
 ### Rendering
 
 You can render the PDF to a file using the `render` script.
-The file will be rendered to current working directory as `resume.pdf`.
+The file will be rendered to current working directory as `thomas-kiljanczyk-resume.pdf`.
 
 ```bash
 yarn render

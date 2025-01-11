@@ -11,7 +11,7 @@ export default function Pill(props: PropsWithChildren) {
                 backgroundColor: theme.colors.primary,
                 borderRadius: 10,
                 fontSize: 10,
-                padding: 5,
+                padding: '4 5',
                 flexShrink: 0
             }}
         >

@@ -8,13 +8,19 @@ const educationData: EducationEntryProps[] = [
         school: 'Poznan University of Technology',
         degree: 'M.Eng',
         graduationDate: '09/2022',
-        details: ['Contributed to ProcessM project (grant no. LIDER/14/0086/L-10/18/NCBR/2019)']
+        details: [
+            'Contributed to ProcessM project (grant no. LIDER/14/0086/L-10/18/NCBR/2019)',
+            'Speciality - Intelligent Internet Technologies (AI, web development)'
+        ]
     },
     {
         school: 'Poznan University of Technology',
         degree: 'B.Eng',
         graduationDate: '02/2021',
-        details: ["Received the Poznan University of Technology Rector's Scholarship"]
+        details: [
+            "Received the Poznan University of Technology Rector's Scholarship",
+            'Speciality - Security of IT Systems'
+        ]
     }
 ];
 
@@ -129,6 +135,10 @@ const skillsData: SkillEntryProps[] = [
     {
         name: 'Tools and Software',
         skills: ['JetBrains IDEs', 'Visual Studio 2022', 'Docker', 'Git', 'SSMS']
+    },
+    {
+        name: 'Other',
+        skills: ['Kotlin', 'Android']
     }
 ];
 
