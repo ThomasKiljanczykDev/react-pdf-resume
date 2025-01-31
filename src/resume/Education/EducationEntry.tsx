@@ -41,9 +41,9 @@ export default function EducationEntry(props: EducationEntryProps) {
                 <DateWithIcon date={props.graduationDate} />
             </View>
             <List>
-                {props.details.map((detail, i) => (
+                {props.details.map((detail, index) => (
                     <Item
-                        key={i}
+                        key={index}
                         contentStyle={{
                             fontSize: 9
                         }}

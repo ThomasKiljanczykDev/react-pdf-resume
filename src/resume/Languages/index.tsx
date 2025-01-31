@@ -19,8 +19,8 @@ function Languages() {
                     gap: 5
                 }}
             >
-                {languagesData.map(language => (
-                    <Pill>
+                {languagesData.map((language, index) => (
+                    <Pill key={index}>
                         {language.name} - {language.level}
                     </Pill>
                 ))}
