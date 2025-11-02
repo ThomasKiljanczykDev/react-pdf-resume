@@ -15,13 +15,18 @@ export default tseslint.config(
     ...errors,
     ...style,
     eslintConfigPrettier,
+    eslintPluginReact.configs.flat.recommended,
+    eslintPluginReact.configs.flat['jsx-runtime'],
+    eslintPluginReactHooks.configs.flat.recommended,
     {
-        plugins: {
-            react: eslintPluginReact,
-            'react-hooks': eslintPluginReactHooks
+        settings: {
+            react: {
+                version: 'detect'
+            }
         },
         rules: {
-            ...eslintPluginReactHooks.configs.recommended.rules
+            'react/jsx-no-bind': 'warn',
+            'react/no-unstable-nested-components': 'warn'
         }
     },
     {
