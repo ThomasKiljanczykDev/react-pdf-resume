@@ -12,8 +12,8 @@ function Education() {
             }}
         >
             <Title>Education</Title>
-            {educationData.map((entry, index) => (
-                <EducationEntry key={index} {...entry} />
+            {educationData.map(entry => (
+                <EducationEntry key={`${entry.school}-${entry.degree}`} {...entry} />
             ))}
         </View>
     );

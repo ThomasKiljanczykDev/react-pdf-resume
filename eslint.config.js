@@ -1,6 +1,6 @@
+import eslintReact from '@eslint-react/eslint-plugin';
 import eslint from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import tseslint from 'typescript-eslint';
 
@@ -14,18 +14,23 @@ export default tseslint.config(
     ...errors,
     ...style,
     eslintConfigPrettier,
-    eslintPluginReact.configs.flat.recommended,
-    eslintPluginReact.configs.flat['jsx-runtime'],
+    {
+        files: ['**/*.ts', '**/*.tsx'],
+        ...eslintReact.configs['recommended-type-checked']
+    },
     eslintPluginReactHooks.configs.flat.recommended,
     {
-        settings: {
-            react: {
-                version: 'detect'
-            }
-        },
+        // Covered by eslint-plugin-react-hooks
         rules: {
-            'react/jsx-no-bind': 'warn',
-            'react/no-unstable-nested-components': 'warn'
+            '@eslint-react/error-boundaries': 'off',
+            '@eslint-react/exhaustive-deps': 'off',
+            '@eslint-react/purity': 'off',
+            '@eslint-react/rules-of-hooks': 'off',
+            '@eslint-react/set-state-in-effect': 'off',
+            '@eslint-react/set-state-in-render': 'off',
+            '@eslint-react/static-components': 'off',
+            '@eslint-react/unsupported-syntax': 'off',
+            '@eslint-react/use-memo': 'off'
         }
     },
     {

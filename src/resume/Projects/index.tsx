@@ -19,8 +19,8 @@ function Projects() {
                     gap: 5
                 }}
             >
-                {projectsData.map((project, index) => (
-                    <Link key={index} src={project.link}>
+                {projectsData.map(project => (
+                    <Link key={project.name} src={project.link}>
                         <Pill>{project.name}</Pill>
                     </Link>
                 ))}

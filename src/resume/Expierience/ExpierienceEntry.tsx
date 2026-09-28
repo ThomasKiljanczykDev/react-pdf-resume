@@ -57,9 +57,9 @@ export default function ExperienceEntry(props: ExperienceEntryProps) {
                 <Text style={styles.position}>{props.position}</Text>
             </View>
             <List>
-                {props.details.map((detail, index) => (
+                {props.details.map(detail => (
                     <Item
-                        key={index}
+                        key={detail}
                         contentStyle={{
                             fontSize: 9
                         }}
