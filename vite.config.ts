@@ -1,34 +1,18 @@
-import path from 'node:path';
 import react from '@vitejs/plugin-react';
-import autoprefixer from 'autoprefixer';
-import postcssNesting from 'postcss-nesting';
 import { defineConfig } from 'vite';
-import tsConfigPaths from 'vite-tsconfig-paths';
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
     mode: 'production',
-    plugins: [react(), tsConfigPaths()],
+    plugins: [react()],
     resolve: {
-        alias: {
-            '@': path.join(__dirname, 'src')
-        }
-    },
-    css: {
-        postcss: {
-            plugins: [postcssNesting(), autoprefixer()]
-        },
-        preprocessorOptions: {
-            scss: {
-                api: 'modern-compiler'
-            }
-        }
+        tsconfigPaths: true
     },
     build: {
         outDir: 'dist',
         emptyOutDir: true,
         sourcemap: 'hidden',
-        rollupOptions: {
+        rolldownOptions: {
             output: {
                 entryFileNames: 'js/script.[hash].js',
                 chunkFileNames: 'js/bundle.[hash].js',
