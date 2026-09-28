@@ -18,7 +18,7 @@ This projects contains a `dev` script which will launch a development server wit
 The PDF previewer does not react to HMR, so you will need to refresh the page to see changes.
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ### Rendering
@@ -27,5 +27,5 @@ You can render the PDF to a file using the `render` script.
 The file will be rendered to current working directory as `thomas-kiljanczyk-resume.pdf`.
 
 ```bash
-yarn render
+pnpm render
 ```

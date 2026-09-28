@@ -31,7 +31,6 @@ export default tseslint.config(
     },
     {
         ignores: [
-            '**/.yarn/',
             '**/.idea/',
             '**/node_modules/',
             '**/dist*/',
