@@ -1,12 +1,12 @@
-import { Font, Link, Page, type PageProps, StyleSheet, Text, View } from '@react-pdf/renderer';
+import { Font, Link, Page, StyleSheet, Text, View, type PageProps } from '@react-pdf/renderer';
 
 import Contact from '@/resume/Contact';
 import Experience from '@/resume/Expierience';
 import Languages from '@/resume/Languages';
-import PreviousExperience from '@/resume/PreviousExpierience';
-import Projects from '@/resume/Projects';
 import { contactData, footerData } from '@/resume/misc/data';
 import theme from '@/resume/misc/theme';
+import PreviousExperience from '@/resume/PreviousExpierience';
+import Projects from '@/resume/Projects';
 
 import Education from './Education';
 import Header from './Header';

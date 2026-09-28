@@ -1,7 +1,7 @@
 import { View } from '@react-pdf/renderer';
 
-import EducationEntry from '@/resume/Education/EducationEntry';
 import Title from '@/resume/components/Title';
+import EducationEntry from '@/resume/Education/EducationEntry';
 import { educationData } from '@/resume/misc/data';
 
 function Education() {

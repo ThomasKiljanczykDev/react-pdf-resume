@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from 'react';
 
-import { StyleSheet, Text, type TextProps, View } from '@react-pdf/renderer';
+import { StyleSheet, Text, View, type TextProps } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
     item: {

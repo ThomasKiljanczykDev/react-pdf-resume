@@ -1,10 +1,9 @@
-import autoprefixer from 'autoprefixer';
 import path from 'node:path';
+import react from '@vitejs/plugin-react';
+import autoprefixer from 'autoprefixer';
 import postcssNesting from 'postcss-nesting';
 import { defineConfig } from 'vite';
 import tsConfigPaths from 'vite-tsconfig-paths';
-
-import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({

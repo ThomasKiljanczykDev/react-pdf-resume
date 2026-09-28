@@ -1,8 +1,8 @@
 import { StyleSheet, View } from '@react-pdf/renderer';
 
-import PreviousExperienceEntry from '@/resume/PreviousExpierience/PreviousExpierienceEntry';
 import Title from '@/resume/components/Title';
 import { previousExperienceData } from '@/resume/misc/data';
+import PreviousExperienceEntry from '@/resume/PreviousExpierience/PreviousExpierienceEntry';
 
 const styles = StyleSheet.create({
     container: {

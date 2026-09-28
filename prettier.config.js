@@ -1,11 +1,12 @@
 /** @typedef { import('prettier').Config } PrettierConfig */
-/** @typedef { import('@trivago/prettier-plugin-sort-imports').PluginConfig } SortImportsConfig */
+/** @typedef { import('@ianvs/prettier-plugin-sort-imports').PluginConfig } SortImportsConfig */
 
 /**
  * @type {PrettierConfig & SortImportsConfig}
  */
 const prettierConfig = {
-    plugins: ['@trivago/prettier-plugin-sort-imports'],
+    // @prettier/plugin-oxc must come before @ianvs/prettier-plugin-sort-imports
+    plugins: ['@prettier/plugin-oxc', '@ianvs/prettier-plugin-sort-imports'],
     // Code style
     semi: true,
     tabWidth: 4,
@@ -19,16 +20,18 @@ const prettierConfig = {
     // Import sort
     importOrder: [
         '^react$',
-        '^[A-z]',
-        '^@[^/]',
+        '',
+        '<BUILTIN_MODULES>',
+        '^@(?!/)',
+        '<THIRD_PARTY_MODULES>',
+        '',
         '^@/',
-        '^\\../',
+        '',
+        '^\\.\\./',
         '^\\./',
-        '^.+.s?css$',
-        '^\\u0000.+'
+        '',
+        '^.+\\.s?css$'
     ],
-    importOrderSeparation: true,
-    importOrderSortSpecifiers: true,
     importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy']
 };
 
