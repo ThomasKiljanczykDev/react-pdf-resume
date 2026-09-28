@@ -1,9 +1,12 @@
-import { Font, Link, Page, StyleSheet, Text, View, type PageProps } from '@react-pdf/renderer';
+import { Page, StyleSheet, View, type PageProps } from '@react-pdf/renderer';
 
 import Contact from '@/resume/Contact';
 import Experience from '@/resume/Expierience';
+import Footer from '@/resume/Footer';
 import Languages from '@/resume/Languages';
-import { contactData, footerData } from '@/resume/misc/data';
+
+import '@/resume/misc/fonts';
+
 import theme from '@/resume/misc/theme';
 import PreviousExperience from '@/resume/PreviousExpierience';
 import Projects from '@/resume/Projects';
@@ -34,43 +37,10 @@ const styles = StyleSheet.create({
         width: 200,
         padding: 12,
         gap: 10
-    },
-    footer: {
-        fontSize: 8,
-        fontFamily: 'Lato',
-        borderRadius: 8,
-        backgroundColor: theme.colors.secondary,
-        textAlign: 'center',
-        padding: 2
-    },
-    link: {
-        fontFamily: 'Lato',
-        fontSize: 8,
-        color: 'black'
     }
 });
 
-Font.register({
-    family: 'Open Sans',
-    src: `https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf`
-});
-
-Font.register({
-    family: 'Lato',
-    src: `https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf`
-});
-
-Font.register({
-    family: 'Lato Italic',
-    src: `https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf`
-});
-
-Font.register({
-    family: 'Lato Bold',
-    src: `https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf`
-});
-
-export default function Resume(props: PageProps) {
+export default function SummaryPage(props: PageProps) {
     return (
         <Page {...props} style={styles.page}>
             <View style={styles.container}>
@@ -87,15 +57,7 @@ export default function Resume(props: PageProps) {
                     <Projects />
                 </View>
             </View>
-            <Text style={styles.footer}>
-                Written using React and TypeScript -{' '}
-                <Link
-                    style={styles.link}
-                    href={`https://github.com/${contactData.gitHubAccount}/${footerData.repository}`}
-                >
-                    github.com/{contactData.gitHubAccount}/{footerData.repository}
-                </Link>
-            </Text>
+            <Footer />
         </Page>
     );
 }

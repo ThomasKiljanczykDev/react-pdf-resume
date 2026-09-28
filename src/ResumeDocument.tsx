@@ -1,6 +1,7 @@
 import { Document } from '@react-pdf/renderer';
 
-import Resume from '@/resume';
+import DetailsPage from '@/resume/DetailsPage';
+import SummaryPage from '@/resume/SummaryPage';
 
 export default function ResumeDocument() {
     return (
@@ -9,7 +10,8 @@ export default function ResumeDocument() {
             subject="The resume of Thomas Kiljanczyk"
             title="Thomas Kiljanczyk Resume"
         >
-            <Resume size="A4" dpi={144} />
+            <SummaryPage size="A4" dpi={144} />
+            <DetailsPage size="A4" dpi={144} />
         </Document>
     );
 }
