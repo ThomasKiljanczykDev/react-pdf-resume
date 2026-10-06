@@ -5,7 +5,8 @@ import { LocationIcon } from '@/resume/components/svg';
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        gap: 2
     },
     location: {
         fontFamily: 'Lato',

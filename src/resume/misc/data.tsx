@@ -4,9 +4,7 @@ import { Link } from '@react-pdf/renderer';
 
 import type { DetailedExperienceEntryProps } from '@/resume/DetailedExperience/DetailedExperienceEntry';
 import type { EducationEntryProps } from '@/resume/Education/EducationEntry';
-import type { ExperienceEntryProps } from '@/resume/Expierience/ExpierienceEntry';
 import linkStyle from '@/resume/misc/linkStyle';
-import type { PreviousExperienceEntryProps } from '@/resume/PreviousExpierience/PreviousExpierienceEntry';
 import type { SkillEntryProps } from '@/resume/Skills/SkillEntry';
 
 const educationData: EducationEntryProps[] = [
@@ -30,71 +28,12 @@ const educationData: EducationEntryProps[] = [
     }
 ];
 
-const experienceData: ExperienceEntryProps[] = [
-    {
-        company: 'Relativity',
-        date: '12/2025 - Present',
-        details: [
-            'Migrating a legacy .NET Framework and Angular app to .NET 10 and React microfrontends as part of a Cloud Native Transformation',
-            'Driving code quality in an AI-assisted workflow through code reviews, documentation and agent guidelines (AGENTS.md)',
-            'Building robust .NET backends and polished, animated React frontends'
-        ],
-        position: 'Senior Software Engineer'
-    },
-    {
-        company: 'Deltologic',
-        date: '12/2025 - Present',
-        details: [
-            'Migrated a production database from RDS SQL Server to Aurora PostgreSQL, cutting costs by over 60% and eliminating a storage I/O bottleneck',
-            'Maintaining .NET and React apps; driving AWS infrastructure improvements and cost optimization'
-        ],
-        position: 'Full Stack Software Engineer Contractor (.Net, Node.js, React, AWS)'
-    },
-    {
-        company: 'Deltologic',
-        date: '07/2023 - 11/2025',
-        details: [
-            "Led engineering on an AWS-based .NET and React project, coordinating delivery with the client's other subcontractors",
-            'Migrated multiple .NET Framework applications to .NET 8',
-            'Improved observability by integrating Datadog via OpenTelemetry across a .NET/React stack',
-            'Built Node.js projects, including AWS Lambda-based APIs and Chrome extensions',
-            'Interviewed and assessed engineering candidates in technical recruitment'
-        ],
-        position: 'Senior Full Stack Software Engineer (.Net, Node.js, React, AWS)'
-    },
-    {
-        company: 'Freelance',
-        date: '10/2024 - Present',
-        details: [
-            'Building custom .NET, TypeScript and React web apps and APIs end-to-end: requirements, architecture, deployment and maintenance'
-        ],
-        position: 'Freelance Software Engineer'
-    },
-    {
-        company: 'Capgemini',
-        date: '04/2022 - 06/2023',
-        details: [
-            'Developed and maintained an ASP.NET MVC (.NET Framework) application',
-            'Introduced CI/CD pipelines and negotiated adoption of JetBrains tooling with the client'
-        ],
-        position: 'Full Stack Software Engineer (.Net)'
-    },
-    {
-        company: 'Inetum',
-        date: '01/2021 - 03/2022',
-        details: [
-            'Built multiple .NET Core microservices and web APIs; maintained a .NET Framework app with React frontend',
-            'Created a standardized Android Virtual Device config mirroring the production device for team-wide Xamarin development'
-        ],
-        position: 'Junior Full Stack Software Engineer (.Net, React)'
-    }
-];
-
 const detailedExperienceData: DetailedExperienceEntryProps[] = [
     {
         company: 'Relativity',
         position: 'Senior Software Engineer',
         location: 'Cracow (Remote)',
+        employment: 'full-time',
         date: '12/2025 - Present',
         details: [
             'Migrating a legacy .NET Framework and Angular application to .NET 10 and React microfrontends as part of a Cloud Native Transformation, moving from a lift-and-shift cloud deployment to scalable, cloud-native services',
@@ -106,6 +45,7 @@ const detailedExperienceData: DetailedExperienceEntryProps[] = [
         company: 'Deltologic',
         position: 'Full Stack Software Engineer Contractor (.Net, Node.js, React, AWS)',
         location: 'Poznan (Remote)',
+        employment: 'part-time',
         date: '12/2025 - Present',
         details: [
             'Developed and maintained .NET and React applications; drove AWS infrastructure improvements and cost optimization',
@@ -116,6 +56,7 @@ const detailedExperienceData: DetailedExperienceEntryProps[] = [
         company: 'Deltologic',
         position: 'Senior Full Stack Software Engineer (.Net, Node.js, React, AWS)',
         location: 'Poznan',
+        employment: 'full-time',
         date: '07/2023 - 11/2025',
         details: [
             "Led engineering on an AWS-based .NET and React project, coordinating delivery with the client's other subcontractors",
@@ -129,6 +70,7 @@ const detailedExperienceData: DetailedExperienceEntryProps[] = [
         company: 'Freelance',
         position: 'Freelance Software Engineer',
         location: 'Remote',
+        employment: 'part-time',
         date: '10/2024 - Present',
         details: [
             'Build custom web applications and APIs for clients using .NET, TypeScript/JavaScript, and React',
@@ -139,6 +81,7 @@ const detailedExperienceData: DetailedExperienceEntryProps[] = [
         company: 'Capgemini',
         position: 'Full Stack Software Engineer (.Net)',
         location: 'Poznan',
+        employment: 'full-time',
         date: '04/2022 - 06/2023',
         details: [
             'Developed and maintained an ASP.NET MVC (.NET Framework) application',
@@ -150,6 +93,7 @@ const detailedExperienceData: DetailedExperienceEntryProps[] = [
         company: 'Inetum',
         position: 'Junior Full Stack Software Engineer (.Net, React)',
         location: 'Poznan',
+        employment: 'part-time',
         date: '01/2021 - 03/2022',
         details: [
             'Built multiple .NET Core microservices and new .NET Core web APIs',
@@ -161,6 +105,7 @@ const detailedExperienceData: DetailedExperienceEntryProps[] = [
         company: 'Inetum',
         position: 'Junior QA Automation Engineer (Groovy, .Net, Azure)',
         location: 'Poznan',
+        employment: 'part-time',
         date: '10/2019 - 12/2020',
         details: [
             'Developed regression test automation in Groovy and Geb for the kdprevent software',
@@ -171,24 +116,12 @@ const detailedExperienceData: DetailedExperienceEntryProps[] = [
         company: 'Inetum',
         position: 'QA Automation Engineer Intern (Java, Groovy)',
         location: 'Poznan',
+        employment: 'part-time',
         date: '07/2019 - 09/2019',
         details: [
             'Developed regression test automation in Groovy and Geb for the kdprevent software',
             'Created a Java and Selenium test automation framework as a contractor for a business client'
         ]
-    }
-];
-
-const previousExperienceData: PreviousExperienceEntryProps[] = [
-    {
-        company: 'Inetum',
-        date: '10/2019 - 12/2020',
-        position: 'Junior QA Automation Engineer (Groovy, .Net, Azure)'
-    },
-    {
-        company: 'Inetum',
-        date: '07/2019 - 09/2019',
-        position: 'QA Automation Engineer Intern (Java, Groovy)'
     }
 ];
 
@@ -210,10 +143,9 @@ const skillsData: SkillEntryProps[] = [
         name: 'React / Node.js',
         skills: [
             'TypeScript',
+            'JavaScript',
             'NestJS',
             'Vite',
-            'Angular',
-            'Webpack',
             'Redux',
             'DevExtreme',
             'Tanstack',
@@ -269,30 +201,10 @@ const languagesData: LanguageDataEntry[] = [
     }
 ];
 
-interface ProjectDataEntry {
-    name: string;
-    link?: string;
-}
-
 const chromeBoilerplateLink =
     'https://github.com/ThomasKiljanczykDev/Chrome-Extension-Boilerplate-React-Vite';
 const lyricCastLink = 'https://github.com/ThomasKiljanczykDev/LyricCast-public';
 const medTimerLink = 'https://github.com/Futsch1/medTimer';
-
-const projectsData: ProjectDataEntry[] = [
-    {
-        name: 'Chrome-Extension-Boilerplate-React-Vite',
-        link: chromeBoilerplateLink
-    },
-    {
-        name: 'LyricCast',
-        link: lyricCastLink
-    },
-    {
-        name: 'MedTimer',
-        link: medTimerLink
-    }
-];
 
 interface DetailedProjectDataEntry {
     name: string;
@@ -302,13 +214,6 @@ interface DetailedProjectDataEntry {
 }
 
 const detailedProjectsData: DetailedProjectDataEntry[] = [
-    {
-        name: 'DiagnosisReportGenerator',
-        link: 'https://github.com/ThomasKiljanczykDev/DiagnosisReportGenerator',
-        date: '01/2024 - Present',
-        description:
-            'Repeatable diagnosis report generator for a medical practice; ASP.NET Core, ABP and EF Core backend with an Electron/TypeScript client.'
-    },
     {
         name: 'Device-Manager-for-BleBox',
         link: 'https://github.com/ThomasKiljanczykDev/Device-Manager-for-BleBox',
@@ -400,12 +305,12 @@ const contactData: ContactData = {
 
 interface HeaderData {
     name: string;
-    subtitle: string;
+    summary: string;
 }
 
 const headerData: HeaderData = {
     name: 'Tomasz Kiljanczyk',
-    subtitle: 'Senior Full Stack Software Engineer (.Net, Node.js, React, AWS)'
+    summary: '7 years in IT, ~6 as a full-stack developer.'
 };
 
 interface FooterData {
@@ -418,12 +323,9 @@ const footerData: FooterData = {
 
 export {
     educationData,
-    experienceData,
     detailedExperienceData,
-    previousExperienceData,
     skillsData,
     languagesData,
-    projectsData,
     detailedProjectsData,
     openSourceData,
     contactData,

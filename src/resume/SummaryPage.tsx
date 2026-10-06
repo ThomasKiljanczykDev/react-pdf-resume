@@ -1,24 +1,22 @@
 import { Page, StyleSheet, View, type PageProps } from '@react-pdf/renderer';
 
 import Contact from '@/resume/Contact';
-import Experience from '@/resume/Expierience';
+import DetailedExperience from '@/resume/DetailedExperience';
 import Footer from '@/resume/Footer';
 import Languages from '@/resume/Languages';
 
 import '@/resume/misc/fonts';
 
 import theme from '@/resume/misc/theme';
-import PreviousExperience from '@/resume/PreviousExpierience';
-import Projects from '@/resume/Projects';
 
-import Education from './Education';
 import Header from './Header';
 import Skills from './Skills';
 
 const styles = StyleSheet.create({
     page: {
         padding: '0.5cm',
-        gap: 10
+        gap: 10,
+        fontFeatureSettings: { liga: false, clig: false }
     },
     container: {
         flex: 1,
@@ -28,7 +26,7 @@ const styles = StyleSheet.create({
     leftColumn: {
         flex: 1,
         flexDirection: 'column',
-        gap: 15
+        gap: 10
     },
     rightColumn: {
         flexDirection: 'column',
@@ -46,15 +44,12 @@ export default function SummaryPage(props: PageProps) {
             <View style={styles.container}>
                 <View style={styles.leftColumn}>
                     <Header />
-                    <Experience />
-                    <PreviousExperience />
-                    <Education />
+                    <DetailedExperience />
                 </View>
                 <View style={styles.rightColumn}>
                     <Contact />
                     <Skills />
                     <Languages />
-                    <Projects />
                 </View>
             </View>
             <Footer />

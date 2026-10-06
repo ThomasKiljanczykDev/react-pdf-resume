@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from '@react-pdf/renderer';
 
 import { DateWithIcon } from '@/resume/components/DateWithIcon';
+import { EmploymentWithIcon, type Employment } from '@/resume/components/EmploymentWithIcon';
 import List, { Item } from '@/resume/components/List';
 import { LocationWithIcon } from '@/resume/components/LocationWithIcon';
 
@@ -30,6 +31,7 @@ export interface DetailedExperienceEntryProps {
     company: string;
     position: string;
     location: string;
+    employment: Employment;
     date: string;
     details: string[];
 }
@@ -41,6 +43,7 @@ export default function DetailedExperienceEntry(props: DetailedExperienceEntryPr
                 <Text style={styles.company}>{props.company}</Text>
                 <View style={styles.meta}>
                     <LocationWithIcon location={props.location} />
+                    <EmploymentWithIcon employment={props.employment} />
                     <DateWithIcon date={props.date} />
                 </View>
             </View>

@@ -19,7 +19,8 @@ export function DateWithIcon(props: DateProps) {
         <View
             style={{
                 flexDirection: 'row',
-                alignItems: 'center'
+                alignItems: 'center',
+                gap: 2
             }}
         >
             <CalendarIcon />

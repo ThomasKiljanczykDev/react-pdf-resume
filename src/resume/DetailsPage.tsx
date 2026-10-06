@@ -1,24 +1,18 @@
-import { Page, StyleSheet, Text, View, type PageProps } from '@react-pdf/renderer';
+import { Page, StyleSheet, View, type PageProps } from '@react-pdf/renderer';
 
-import DetailedExperience from '@/resume/DetailedExperience';
 import DetailedProjects from '@/resume/DetailedProjects';
+import Education from '@/resume/Education';
 import Footer from '@/resume/Footer';
 
 import '@/resume/misc/fonts';
 
-import theme from '@/resume/misc/theme';
 import OpenSource from '@/resume/OpenSource';
 
 const styles = StyleSheet.create({
     page: {
         padding: '0.5cm',
-        paddingBottom: 40
-    },
-    header: {
-        fontSize: 14,
-        color: theme.colors.primary,
-        fontFamily: 'Lato Bold',
-        textTransform: 'uppercase'
+        paddingBottom: 40,
+        fontFeatureSettings: { liga: false, clig: false }
     },
     container: {
         flexDirection: 'column',
@@ -36,10 +30,9 @@ export default function DetailsPage(props: PageProps) {
     return (
         <Page {...props} style={styles.page}>
             <View style={styles.container}>
-                <Text style={styles.header}>Details</Text>
-                <DetailedExperience />
-                <OpenSource />
                 <DetailedProjects />
+                <OpenSource />
+                <Education />
             </View>
             <View style={styles.footer} fixed>
                 <Footer />

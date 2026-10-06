@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
         color: theme.colors.primary,
         fontFamily: 'Lato Bold'
     },
-    subtitle: {
+    summary: {
         fontSize: 10,
-        justifySelf: 'flex-end',
-        fontFamily: 'Lato'
+        fontFamily: 'Lato',
+        textTransform: 'none'
     },
     link: {
         fontFamily: 'Lato',
@@ -44,7 +44,7 @@ function Header() {
         <View style={styles.container}>
             <View style={styles.detailColumn}>
                 <Text style={styles.name}>{headerData.name}</Text>
-                <Text style={styles.subtitle}>{headerData.subtitle}</Text>
+                <Text style={styles.summary}>{headerData.summary}</Text>
             </View>
         </View>
     );
